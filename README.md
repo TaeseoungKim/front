@@ -1,7 +1,7 @@
 ## Implementation of Tracing-based Net-perf for Linux Kernel Network Performance Analysis - 한국지식정보기술학회 2022년 제17권 제4호(8월호) 논문 게재
 
 <details open>
-<summary>한국어 버전</summary>
+<summary>한국어</summary>
 
 # 🌐 net-perf
 
@@ -50,6 +50,7 @@ prepare 모듈은 성능 측정이 완료되었음을 확인하기 위해 프롬
 ![커널모듈로딩여부](https://user-images.githubusercontent.com/61650992/170806168-aba6d751-68ea-4dda-90cf-867685a1b5af.png)
 
 모듈이 로드되면 ftrace에서 available_filter_functions를 사용하여 추적 가능한 함수 목록을 얻을 수 있습니다. 이 목록을 기반으로 사용자는 성능 측정 과정에서 추적할 함수를 등록합니다. ftrace는 set_graph_function이라는 API를 제공하여 특정 함수를 추적하며, 파일에 함수 이름을 등록하여 필터링할 함수 목록을 구성합니다. 아래는 추적할 함수 등록 단계의 일부 코드로, 커널 모듈 이름에 따라 ftrace에서 추적할 수 있는 함수 목록을 가져오고, 성능 분석을 위해 선택된 함수를 등록합니다. 이후 등록된 함수를 기반으로 추적이 수행됩니다.
+
 ![트레이싱할 함수 등록](https://user-images.githubusercontent.com/61650992/170806422-5199566b-8dc0-490f-bc06-3d4fd6bfdd4e.png)
 
 마지막으로 ftrace 결과 저장 단계에서는 사용자가 "When the test is finished (y/n)?" 프롬프트에 y를 입력하면 성능 측정이 완료되고 지금까지의 추적 결과가 초기화 단계에서 지정된 경로에 trace API를 사용하여 저장됩니다.
@@ -57,7 +58,7 @@ prepare 모듈은 성능 측정이 완료되었음을 확인하기 위해 프롬
 </details>
 
 <details close>
-<summary>English Version</summary>
+<summary>English</summary>
 # 🌐 net-perf
 
 `net-perf` is a web tool for measuring network performance.
